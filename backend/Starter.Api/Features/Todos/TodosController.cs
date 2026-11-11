@@ -12,7 +12,7 @@ public sealed class TodosController(TodoService service) : ControllerBase
     public async Task<ActionResult<IReadOnlyList<TodoResponse>>> List(CancellationToken cancellationToken)
     {
         var result = await service.ListAsync(cancellationToken);
-        return Ok(result.Data);
+         return Ok(                                                                                                                                                                              result.Data);
     }
 
     [HttpPost]
